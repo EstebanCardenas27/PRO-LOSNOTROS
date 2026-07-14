@@ -11,7 +11,7 @@ import { PlusSquareIcon } from "@/components/Icons/PlusSquareIcon";
 import { MovementIcon } from "@/components/Icons/MovementIcon";
 
 export const servicesSection = {
-  eyebrow: "Cómo Podemos Acompañarte",
+  eyebrow: "BIENESTAR QUE SE SIENTE",
   title: "Un Espacio para Cuidar de Ti",
 };
 

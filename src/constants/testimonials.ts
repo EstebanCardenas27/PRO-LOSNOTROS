@@ -2,7 +2,7 @@ export const testimonials = [
   {
     text:
       "Encontré en Los Notros un espacio de bienestar y calma. Cada atención me ayuda a reconectar con mi salud y equilibrio personal.",
-    name: "Carmen S.",
+    name: "Jenifer Barrera",
     role: "Paciente desde 2022",
   },
   {

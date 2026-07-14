@@ -1,5 +1,5 @@
 export const hero =
-  "Centro de Bienestar Los Notros";
+  "Centro de Bienestar | Los Notros";
 
 export const description =
   "Un espacio acogedor donde profesionales de distintas áreas trabajan para acompañarte en tu salud física, emocional y bienestar general mediante atención presencial y remota.";
@@ -18,7 +18,7 @@ export const heroButtons = [
 ];
 
 export const contactInfo = {
-  title: "Tu bienestar comienza aquí",
+  title: "Regálate un momento para ti",
   description:
     "Masajes, estética, chequeo bioenergético y acceso a profesionales especializados. Estamos en San José de la Mariquina listos para recibirte. ",
   phone: "+56 9 9576 7295",

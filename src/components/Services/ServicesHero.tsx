@@ -9,26 +9,28 @@ export const ServcicesHero = () => {
 
                 <div className="inline-flex items-center gap-2 bg-(--secondary-soft)/40 px-4 py-1.5 rounded-full border border-(--secondary)/20 w-fit">
                     <span className="text-sm font-semibold text-(--secondary) tracking-wide">
-                        BIENESTAR INTEGRAL Y ACOMPAÑAMIENTO REMOTO
+                        TU BIENESTAR, NUESTRO PROPÓSITO
                     </span>
                 </div>
                 
                 <h1 className="text-3xl sm:text-4xl md:text-display-lg text-(--primary) leading-tight">
-                    Un espacio para <br />
+                    Equilibrio para <br />
                     <span className="italic font-normal text-(--tertiary)">
-                    restaurar tu equilibrio
+                        tu vida real
                     </span>
                 </h1>
-            
+
                 <div className="space-y-4 max-w-xl">
                     <p className="text-base sm:text-lg text-(--muted)">
-                    En Los Notros encontrarás un espacio dedicado al bienestar físico y emocional,
-                    con terapias de relajación, descontracturantes y técnicas de recuperación integral.
+                        En Los Notros creemos que el bienestar es parte de tu vida.
+                        Por eso encontrarás un espacio dedicado al cuidado físico y emocional,
+                        con terapias corporales, relajación y acompañamiento profesional.
                     </p>
 
                     <p className="text-base sm:text-lg text-(--muted)">
-                    Además, contamos con un servicio de apoyo remoto con profesionales de la salud,
-                    en un entorno privado y asistido.
+                        Renueva tu energía, renueva tu bienestar con atención personalizada,
+                        servicios orientados al equilibrio integral y apoyo profesional
+                        presencial o remoto.
                     </p>
                 </div>
                 
@@ -63,7 +65,9 @@ export const ServcicesHero = () => {
                         </div>
 
                         <span className="text-xs sm:text-sm leading-snug">
-                            Atención Integral
+                            Tu momento,
+                            <br />
+                            tu bienestar
                         </span>
                     </div>
                 </div>

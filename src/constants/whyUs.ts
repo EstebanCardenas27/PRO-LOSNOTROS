@@ -1,8 +1,8 @@
 export const whyChooseUsItems = [
   {
-    title: "Acompañamiento Integral",
+    title: "Atención Personalizada",
     description:
-      "No solo tratamos el síntoma, buscamos la raíz del desequilibrio.",
+      "Cada persona es única,adaptamos nuestros tratamientos a tus necesidades y objetivos para brindarte una experiencia realmente personalizada",
   },
   {
     title: "Especialistas Certificados",
@@ -12,6 +12,6 @@ export const whyChooseUsItems = [
   {
     title: "Ambiente Restaurador",
     description:
-      "Instalaciones diseñadas para su absoluta comodidad y privacidad.",
+      "Creamos un ambiente cálido, tranquilo y privado donde puedas relajarte, renovarte y dedicarte el tiempo que mereces",
   },
 ];

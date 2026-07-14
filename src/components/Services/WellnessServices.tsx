@@ -9,6 +9,7 @@ import {
 } from "@/constants/services";
 import { PlusSquareIcon } from "@/components/Icons/PlusSquareIcon";
 import Link from "next/link";
+import { ChevronRightIcon } from "../Icons/ChevrontRight";
 
 export const WellnessServices = () => {
     const FeaturedIcon = wellnessServicesConst[0].icon;
@@ -51,21 +52,28 @@ export const WellnessServices = () => {
                             {wellnessServicesConst[0]?.tags?.map((tag) => (
                                 <span
                                 key={tag}
-                                className="px-3 py-1 rounded-full border border-(--outline-variant)/40 text-sm"
+                                className="px-3 py-1 rounded-full border text-sm"
                                 >
                                 {tag}
                                 </span>
                             ))}
                         </div>
 
-                        <Link href="/contact" className="btn-primary px-6 py-3 inline-flex" >Coordinar atención</Link>
+                        <Link
+                            href="/contact"
+                            className="group inline-flex items-center justify-center gap-2 btn-primary px-6 py-3 rounded-full"
+                            >
+                            <span>Coordinar atención</span>
+
+                            <ChevronRightIcon className="w-4 h-4 sm:w-5 sm:h-5 text-white transition-all duration-300 group-hover:translate-x-1" />
+                        </Link>
                     </div>
 
                     {wellnessServicesConst.slice(1).map((service) => {
                         const Icon = service.icon;
 
                         return (
-                            <div key={service.title} className="bg-(--surface-container-highest) p-8 rounded-xl border border-(--outline-variant)/20 space-y-5 h-full">
+                            <div key={service.title} className="bg-(--surface-container-highest) p-8 rounded-xl border space-y-5 h-full">
                                 <div>
                                     <div className="w-14 h-14 rounded-full bg-(--secondary-soft) flex items-center justify-center">
                                         <Icon className="w-7 h-7 text-(--secondary)" />
@@ -84,7 +92,7 @@ export const WellnessServices = () => {
                                         {service.tags.map((tag) => (
                                             <span
                                                 key={tag}
-                                                className="px-3 py-1 rounded-full border border-(--outline-variant)/40 text-xs "
+                                                className="px-3 py-1 rounded-full border text-xs "
                                             >
                                                 {tag}
                                             </span>
@@ -151,41 +159,35 @@ export const WellnessServices = () => {
                         const Icon = service.icon!;
 
                         return (
-                            <div
-                                key={service.title}
-                                className="bg-white p-8 rounded-xl border border-(--outline-variant)/90 space-y-5"
-                            >
+                            <div key={service.title} className="relative card-organic overflow-hidden bg-white p-8 rounded-xl border border-(--outline-variant)/90 space-y-5">
 
-                                <div className="flex justify-center">
-                                    <div className="w-16 h-16 rounded-lg bg-(--primary-soft)/30 flex items-center justify-center">
-                                        <Icon className="w-8 h-8 text-(--primary)" />
-                                    </div>
+                                <div className="absolute -top-6 -right-6 opacity-20 pointer-events-none">
+                                    <Icon className="w-36 h-36 text-(--primary)" />
                                 </div>
 
+                                <div className="relative z-10">
 
-                                <h3 className="text-lg text-(--primary) font-semibold text-center">
-                                    {service.title}
-                                </h3>
+                                    <h3 className="text-lg text-(--primary) font-semibold text-center mt-5">
+                                        {service.title}
+                                    </h3>
 
+                                    <p className="text-(--muted) leading-relaxed text-center">
+                                        {service.description}
+                                    </p>
 
-                                <p className="text-(--muted) leading-relaxed text-center">
-                                    {service.description}
-                                </p>
-
-
-                                {service.tags && (
-                                    <div className="flex flex-wrap gap-2 justify-center">
-                                        {service.tags.map((tag) => (
-                                            <span
-                                                key={tag}
-                                                className="px-3 py-1 rounded-full border border-(--outline-variant)/40 text-xs"
-                                            >
-                                                {tag}
-                                            </span>
-                                        ))}
-                                    </div>
-                                )}
-
+                                    {service.tags && (
+                                        <div className="flex flex-wrap gap-2 justify-center mt-5">
+                                            {service.tags.map((tag) => (
+                                                <span
+                                                    key={tag}
+                                                    className="px-3 py-1 rounded-full border border-(--outline-variant) text-xs"
+                                                >
+                                                    {tag}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    )}
+                                </div>
                             </div>
                         );
                     })}
@@ -209,9 +211,11 @@ export const WellnessServices = () => {
 
                     <Link
                         href="/professionals"
-                        className="btn-secondary px-6 py-3 relative z-10 inline-flex"
-                    >
-                        Conocer Profesionales
+                        className="group btn-secondary px-6 py-3 relative z-10 inline-flex items-center gap-2"
+                        >
+                        <span>Conocer Profesionales</span>
+
+                        <ChevronRightIcon className="w-4 h-4 sm:w-5 sm:h-5 text-current transition-all duration-300 group-hover:translate-x-1" />
                     </Link>
 
                 </div>

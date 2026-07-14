@@ -45,40 +45,26 @@ export const ContactForm = () => {
       <div className="container-custom md:max-w-3xl!">
 
         <div className="text-center mb-16">
-          <h1>{contact.title}</h1>
+
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-(--secondary)!">
+              Tu cuerpo también necesita una pausa
+          </p>  
+
+          <h1>{contact.title}</h1>         
 
           <p className="mt-4 text-(--muted) max-w-3xl mx-auto">
             {contact.description}
           </p>
+
         </div>
 
         <Divider />
 
         <div
-          className="
-            mt-12
-            p-8
-            md:p-12
-            relative
-            overflow-hidden
-            rounded-[40px]
-            bg-(--surface-container-low)
-            border
-            border-(--outline-variant)
-            shadow-[0_20px_60px_rgba(0,0,0,0.05)]
-          "
-        >
+          className="mt-12 p-8 md:p-12 relative overflow-hidden rounded-[40px] bg-(--surface-container-low) border border-(--outline-variant) shadow-[0_20px_60px_rgba(0,0,0,0.05)]">
           <div
-            className="
-              absolute
-              -top-16
-              -right-16
-              opacity-[0.06]
-              pointer-events-none
-              rotate-12
-            "
-          >
-            <SpaIcon className="w-52 h-52 text-(--secondary)" />
+            className="absolute -top-16 -right-16 opacity-[0.06] pointer-events-none rotate-12">
+              <SpaIcon className="w-52 h-52 text-(--secondary)" />
           </div>
 
           <form onSubmit={handleSubmit} className="grid md:grid-cols-2 gap-8 relative z-10">

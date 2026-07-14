@@ -31,7 +31,7 @@ export function Footer() {
                 </div>
                 
                 <div className="flex flex-col items-center text-center">
-                    <h4 className="mb-6 font-heading text-lg relative font-semibold text- inline-block">
+                    <h4 className="mb-6 font-heading text-lg relative font-semibold inline-block">
                         Navegación
                         <span className="absolute left-1/2 -bottom-2 h-0.5 w-10 -translate-x-1/2 bg-primary rounded-full" />
                     </h4>
@@ -68,7 +68,7 @@ export function Footer() {
 
                     <div className="mt-8 flex items-center gap-4">                        
                         <a
-                            href={`mailto:${COMPANY.contact.email}`}
+                            href={`mailto:${COMPANY.contact.email.label}`}
                             aria-label="Enviar correo"
                             className="w-11 h-11 rounded-full border border-(--outline-variant) flex items-center justify-center text-(--primary) transition-all duration-300 hover:bg-(--primary) hover:text-white"
                         >

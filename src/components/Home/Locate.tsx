@@ -3,6 +3,7 @@ import Link from "next/link";
 import { locateMedia } from "@/constants/general";
 
 import { COMPANY } from "@/constants/company";
+import { LocationIcon } from "../Icons/LocationIcon";
 
 export const Locate = () => {
   return (
@@ -46,23 +47,25 @@ export const Locate = () => {
             <div className="lg:col-span-5 space-y-6 text-center lg:text-left">
 
                 <span className="badge mb-6">
-                   Te esperamos • San José de la Mariquina  
+                   UN ESPACIO PARA VOLVER A TI • SAN JOSÉ DE LA MARIQUINA
                 </span>
 
                 <h2 className="text-display-lg text-(--primary)">
                     {COMPANY.shortName}
                 </h2>
 
-                <p className="text-(--muted) leading-relaxed max-w-md">
-                    Te esperamos en San José de la Mariquina. Un espacio diseñado para tu bienestar integral, listo para recibirte.
+                <p className="text-(--muted) leading-relaxed">
+                    Te esperamos en un ambiente cálido y acogedor, pensado para desconectarte, recuperar energías y dedicar un momento a tu bienestar.
                 </p>
 
                 <Link
                     href="https://www.google.com/maps?q=-39.539192983093464,-72.9594632596832"
                     target="_blank"
-                    className="inline-flex items-center gap-2 btn-primary px-6 py-3"
+                    className="group inline-flex items-center gap-2 btn-primary rounded-full px-6 py-3"
                     >
-                    Cómo llegar
+                    <span>Cómo llegar</span>
+
+                    <LocationIcon className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                 </Link>
             </div>
         </div>

@@ -5,7 +5,7 @@ export const Divider = () => {
     <div className="relative w-full max-w-5xl mx-auto my-12">
       <div className="h-px bg-(--outline-variant)/30" />
 
-      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-(--background) px-3">
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 backdrop-blur-2xl bg-transparent px-3">
         <LeafDividerIcon className="w-5 h-5 text-(--primary)" />
       </div>
     </div>

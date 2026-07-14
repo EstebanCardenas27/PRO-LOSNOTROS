@@ -3,12 +3,18 @@ import { whyChooseUsItems } from "@/constants/whyUs";
 export const WhyChooseUs = () => {
   return (
     <section className="bg-(--surface-container-high)/50 py-16">
+
       <div className="px-6 md:px-20 max-w-7xl mx-auto">
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
-            <h2 className="text-[36px] md:text-[48px] text-(--primary) leading-tight">
-              ¿Por qué elegirnos?
-            </h2>
+            <div>
+                <span className="text-sm font-semibold uppercase tracking-[0.2em] text-(--secondary)">
+                    TU BIENESTAR TAMBIÉN ES PRIORIDAD
+                </span>
+
+                <h2>¿Por qué elegirnos?</h2>
+            </div>            
 
             <ul className="space-y-6">
               {whyChooseUsItems.map((item, index) => (

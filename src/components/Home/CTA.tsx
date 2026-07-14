@@ -33,7 +33,7 @@ export const CTA = () => {
 
                 <Link 
                     href="/contact"
-                    className="inline-block mt-8 bg-white text-(--primary) px-10 py-4 rounded-full font-bold text-lg shadow-sm hover:scale-105 transition cursor-pointer">
+                    className="inline-block mt-8 bg-white border text-(--primary) px-10 py-4 rounded-full font-bold text-lg shadow-sm hover:scale-105 transition cursor-pointer">
                     {contactInfo.button}
                 </Link>
             </div>

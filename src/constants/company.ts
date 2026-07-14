@@ -19,12 +19,12 @@ export const COMPANY = {
     },
 
     email: {
-      label: "contacto@losnotros.cl",
-      href: "mailto:contacto@losnotros.cl",
+      label: "bienestarlosnotros@gmail.com",
+      href: "mailto:bienestarlosnotros@gmail.com",
     },
   },
 
   social: {
-    instagram: "https://instagram.com/losnotros",
+    instagram: "https://www.instagram.com/bienestarlosnotros/",
   },
 };
