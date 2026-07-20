@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { COMPANY } from "@/constants/company";
 import { NAVIGATION } from "@/constants/navigation";
@@ -12,12 +12,27 @@ export function Header() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
+  useEffect(() => {
+    document.body.style.overflow = open
+        ? "hidden"
+        : "";
+
+    return () => {
+        document.body.style.overflow = "";
+    };
+  }, [open]);
+
+  useEffect(() => {
+        setOpen(false);
+    }, [pathname]);
+
   const isActive = (href: string) =>
     pathname === href || pathname.startsWith(href + "/");
 
   return (
-    <header className="sticky top-0 z-50 border-b border-outline-variant/40 bg-background/50 backdrop-blur-md">
-        <div className="container-custom">
+    <>
+    <header className="sticky top-0 z-50 border-b border-outline-variant/40 bg-background md:bg-background/50 backdrop-blur-md">
+        <div className=" relative container-custom">
 
             <div className="flex h-20 md:h-24 items-center justify-between">
 
@@ -47,6 +62,7 @@ export function Header() {
                     <Link
                         key={item.href}
                         href={item.href}
+                        scroll
                         className={`relative text-lg transition-colors duration-300 hover:text-primary ${
                         isActive(item.href)
                             ? "text-primary font-semibold after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full after:bg-primary"
@@ -86,19 +102,17 @@ export function Header() {
                     />
                 </button>
             </div>
-
-            <div
-            className={`md:hidden overflow-hidden transition-all duration-300 ${
-                open ? "max-h-96 py-4" : "max-h-0"
-            }`}
-            >
+            
+            <div className={`md:hidden absolute top-full left-0 right-0 z-50 bg-background border-b border-outline-variant/40 shadow-lg transition-all duration-300
+            ${open ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none" } `} >
                 <nav className="flex flex-col gap-2 items-center text-center">
                     {NAVIGATION.map((item) => (
                     <Link
                         key={item.href}
                         href={item.href}
+                        scroll
                         onClick={() => setOpen(false)}
-                        className={`py-3 w-full text-sm border-b border-outline-variant/20 transition-colors text-center ${
+                        className={`py-2 w-full text-sm border-b border-outline-variant/20 transition-colors text-center ${
                             isActive(item.href)
                                 ? "text-primary font-semibold"
                                 : "hover:text-primary"
@@ -111,13 +125,27 @@ export function Header() {
                     <Link
                     href="/contact"
                     onClick={() => setOpen(false)}
-                    className="w-40 btn-primary text-center"
+                    className="flex w-40 h-12 btn-primary text-center justify-center items-center mb-6"
                     >
                     Reservar Hora
                     </Link>
-                </nav>
-            </div>
-        </div>
+                </nav>                
+            </div>                    
+        </div>                
     </header>
+    {open && (
+        <div
+            onClick={() => setOpen(false)}
+            className="
+                fixed
+                inset-0
+                top-20
+                z-40
+                bg-transparent
+                md:hidden
+            "
+        />
+    )}   
+    </>
   );
 }

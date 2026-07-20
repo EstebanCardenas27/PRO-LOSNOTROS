@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   featuredService,
   secondaryServices,
@@ -10,7 +11,7 @@ export const FeatureServices = () => {
   const TherapyIcon = specificTherapy.icon;
 
   return (
-    <section className="section-spacing">
+    <section id="servicios" className="section-spacing scroll-mt-24">
         <div className="container-custom">
             <div className="mb-16 space-y-2 text-center">
                 <span className="text-sm font-semibold uppercase tracking-[0.2em] text-(--secondary)">
@@ -25,7 +26,7 @@ export const FeatureServices = () => {
                     <div className="card-organic flex h-full flex-col justify-between border border-(--outline-variant) bg-(--surface-container-low) p-8">
                         <div>
                             <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl border border-(--outline-variant) bg-(--primary-soft)/30">
-                                <FeaturedIcon className="h-8 w-8 text-(--primary)" />
+                                <FeaturedIcon aria-hidden="true" className="h-8 w-8 text-(--primary)" />
                             </div>
 
                             <h3 className="mb-4">
@@ -37,9 +38,11 @@ export const FeatureServices = () => {
                             </p>
                         </div>
 
-                        <img
+                        <Image
                             src={featuredService.image}
                             alt={featuredService.title}
+                            width={600}
+                            height={400}
                             className="mt-8 h-56 w-full rounded-3xl object-cover shadow-sm"
                         />
                     </div>

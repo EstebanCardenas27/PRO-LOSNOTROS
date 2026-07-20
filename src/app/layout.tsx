@@ -5,6 +5,7 @@ import "./globals.css";
 
 import { Header } from "@/components/ui/Header";
 import { Footer } from "@/components/ui/Footer";
+import { ScrollToTop } from "@/components/ui/ScrollToTop";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Bienestar, salud y acompañamiento integral para la comunidad de San José de la Mariquina",
+    "Centro de bienestar en San José de la Mariquina especializado en masajes terapéuticos, depilación, estética y atención online con psicólogos, kinesiólogos y otros profesionales.",
 
   icons: {
     icon: [
@@ -64,6 +65,7 @@ export default function RootLayout({
         <main>{children}</main>
 
         <Footer />
+        <ScrollToTop/>
       </body>
     </html>
   );
