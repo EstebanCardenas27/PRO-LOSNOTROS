@@ -31,7 +31,7 @@ export const Testimonials = () => {
 
                     <div className="mt-8 flex items-center gap-3 not-italic">
 
-                        <div className="w-10 h-10 rounded-full bg-(--secondary-soft)" />
+                        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-(--secondary-soft) font-semibold text-(--secondary) uppercase">{item.name.charAt(0)}</div>
 
                         <div>
                             <p className="font-bold text-(--primary) text-sm">

@@ -107,7 +107,7 @@ export const WellnessServices = () => {
 
                         <div className="w-full md:w-1/3 h-48 rounded-lg overflow-hidden bg-(--surface)">
                             <img
-                                src="/therapies.jpg"
+                                src="/therapies.webp"
                                 alt="Terapias complementarias"
                                 className="w-full h-full object-cover"
                             />

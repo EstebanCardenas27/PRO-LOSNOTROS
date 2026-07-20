@@ -38,12 +38,12 @@ export function Header() {
 
                 <Link href="/" className="flex items-center gap-3 md:gap-4">
                     <Image
-                    src={COMPANY.logo}
-                    alt={COMPANY.name}
-                    width={48}
-                    height={48}
-                    className="md:w-16 md:h-16 scale-125"
-                    priority
+                        src={COMPANY.logo}
+                        alt={COMPANY.name}
+                        width={80}
+                        height={80}
+                        quality={100}
+                        priority
                     />
 
                     <div className="leading-tight">

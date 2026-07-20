@@ -19,7 +19,7 @@ export const featuredService = {
   title: "Bienestar Corporal",
   description:
     "Masajes terapéuticos, drenaje linfático y tratamientos corporales orientados al descanso, la recuperación física y el equilibrio integral.",
-  image: "/massage.png",
+  image: "/massage.webp",
   icon: MassageIcon,
 };
 

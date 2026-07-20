@@ -7,9 +7,9 @@ export const testimonials = [
   },
   {
     text:
-      "La atención es cercana y profesional. Mi tratamiento de drenaje linfático ha contribuido positivamente a mi bienestar diario.",
-    name: "Ricardo M.",
-    role: "Recuperación Post-Op",
+      "Tras una lesión en mi pie, las terapias de masaje y las enseñanzas recibidas en Los Notros me ayudaron a recuperar mi movilidad.",
+    name: "Luis Cárdenas",
+    role: "Recuperación Funcional",
   },
   {
     text:

@@ -7,7 +7,7 @@ import { contactInfo } from "@/constants/general";
 export const CTA = () => {
   return (
     <section className="px-6 md:px-20 py-16 max-w-7xl mx-auto">
-        <div className="rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden bg-[url('/cta_mobile.png')] md:bg-[url('/cta.png')] backdrop-blur-3xl bg-cover bg-center">
+        <div className="rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden bg-[url('/cta_mobile.webp')] md:bg-[url('/cta.webp')] backdrop-blur-3xl bg-cover bg-center">
             <div className="relative z-10 space-y-6">
                 <h2 className="text-[36px] md:text-[48px] leading-tight">
                     {contactInfo.title}
