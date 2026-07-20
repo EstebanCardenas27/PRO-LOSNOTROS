@@ -17,8 +17,10 @@ export function Footer() {
                     <Image
                         src={COMPANY.logo}
                         alt={COMPANY.name}
-                        width={96}
-                        height={96}
+                        width={100}
+                        height={100}
+                        quality={100}
+                        priority
                         className="mb-4"
                     />
                     <h3 className="mb-3 font-heading text-2xl text-primary">
