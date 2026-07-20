@@ -11,8 +11,13 @@ import {
 } from "@/constants/general";
 import { ChevronRightIcon } from "@/components/Icons/ChevrontRight";
 
-window.history.replaceState(null, "", window.location.pathname);
 const [titleLine1, titleLine2] = hero.split("|");
+const handleExploreClick = () => {
+  document.getElementById("servicios")?.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
+};
 const buttonBaseClass =
   "group inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 font-semibold transition-all duration-300";
 
@@ -91,14 +96,8 @@ export const Hero = () => (
 
                 <div className="lg:col-span-12 flex flex-col items-center text-center text-white/80 pt-12 lg:pt-30! ">
                     <button
-                        onClick={() => {
-                            document
-                            .getElementById("servicios")
-                            ?.scrollIntoView({
-                                behavior: "smooth",
-                                block: "start",
-                            });
-                        }}
+                        type="button"
+                        onClick={handleExploreClick}
                         className="group flex flex-col items-center text-black transition-opacity hover:opacity-70 cursor-pointer"
                         >
                         <span className="text-xs uppercase tracking-[0.2em]">
