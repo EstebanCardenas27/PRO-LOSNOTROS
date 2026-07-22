@@ -31,9 +31,8 @@ export const metadata: Metadata = {
     "Centro de bienestar en San José de la Mariquina especializado en masajes terapéuticos, depilación, estética y atención online con psicólogos, kinesiólogos y otros profesionales.",
 
   icons: {
-    icon: [
-      { url: "/ico/favicon.png" },
-      // { url: "/ico/favicon.svg", type: "image/svg+xml" },
+    icon: [      
+      { url: "/ico/favicon.svg", type: "image/svg+xml" },
       { url: "/ico/favicon-96x96.png", sizes: "96x96", type: "image/png" },
     ],
     apple: "/ico/apple-touch-icon.png",
